@@ -36,23 +36,25 @@ class LogarithmicFunctions {
   def sqrt(x: LynxNumber): Double = {
     math.sqrt(x.number.doubleValue())
   }  
-   @LynxProcedure(name = "abs")
+  
+  @LynxProcedure(name = "abs")
   def abs(x: LynxNumber): Double = {
     math.abs(x.number.doubleValue())
-}
+  }
+  
   @LynxProcedure(name = "cbrt")
   def cbrt(x: LynxNumber): Double = {
     math.cbrt(x.number.doubleValue())
-}
-
-@LynxProcedure(name = "floor")
+  }
+  
+  @LynxProcedure(name = "floor")
   def floor(x: LynxNumber): Double = {
     math.floor(x.number.doubleValue())
-}
+  }
 
-@LynxProcedure(name = "ceil")
+  @LynxProcedure(name = "ceil")
   def ceil(x: LynxNumber): Double = {
     math.ceil(x.number.doubleValue())
-}
+  }
 
 }
