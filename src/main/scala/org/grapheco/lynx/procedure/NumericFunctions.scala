@@ -40,28 +40,14 @@ class NumericFunctions {
     LynxFloat(math.round(x.number.doubleValue()))
   }
 
-  @LynxProcedure(name = "round")
-  def round(x: LynxNumber, precision: LynxInteger): Double = {
-    val base = math.pow(10, precision.value)
-    math.round(base * x.number.doubleValue()).toDouble / base
-  }
-
   @LynxProcedure(name = "sign")
   def sign(x: LynxNumber): Double = {
     math.signum(x.number.doubleValue())
   }
-    @LynxProcedure(name = "cbrt")
+  
+  @LynxProcedure(name = "cbrt")
   def cbrt(x: LynxNumber): Double = {
     math.cbrt(x.number.doubleValue())
-}
-
-@LynxProcedure(name = "floor")
-  def floor(x: LynxNumber): Double = {
-    math.floor(x.number.doubleValue())
-}
-
-@LynxProcedure(name = "ceil")
-  def ceil(x: LynxNumber): Double = {
-    math.ceil(x.number.doubleValue())
-}
+  }
+ 
 }
